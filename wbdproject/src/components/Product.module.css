@@ -1,0 +1,35 @@
+/* .container{ */
+    /* margin-top: 20px; */
+/* } */
+.imgtag{
+    width: 300px;
+    height: 300px;
+}
+.card_product{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 25%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+.flexdiv{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    margin-top: 20px;
+}
+.flexdiv h1{
+    padding: 0px;
+    margin: 0px;
+}
+.card_products{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 25%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
