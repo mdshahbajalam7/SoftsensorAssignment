@@ -1,9 +1,9 @@
-/* .container{ */
-    /* margin-top: 20px; */
-/* } */
+.container{ 
+    margin-top: 100px;
+ }
 .imgtag{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 .card_product{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -19,17 +19,23 @@
     width: 80%;
     height: 40px;
     margin: auto;
+    margin-top: 100px;
+    position: fixed;
     margin-top: 20px;
+
 }
 .flexdiv h1{
     padding: 0px;
     margin: 0px;
 }
 .card_products{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 25%;
     margin: auto;
-    border-radius: 10px;
-    margin-top: 20px;
+    width: 25%;
+    margin-top: 100px;
+    /* border: 1px solid; */
+}
+.map{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 10px;
+    margin-top: 20px;
 }

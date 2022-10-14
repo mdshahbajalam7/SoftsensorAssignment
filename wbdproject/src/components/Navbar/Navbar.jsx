@@ -1,9 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "../Navbar/Navbar.module.css";
 
 function Navbar() {
-  const getdata = JSON.parse(localStorage.getItem("cart_data"));
+  
+  const {cartdatacount} = useSelector(state=>state)
+
   return (
     <div className={styles.navbar}>
       <h3>Fresh Stock</h3>
@@ -17,7 +20,7 @@ function Navbar() {
         }}
         to="/cart/:id"
       >
-        cart_{!getdata ? 0 : getdata.length}
+        cart_{cartdatacount}
       </Link>
     </div>
   );
