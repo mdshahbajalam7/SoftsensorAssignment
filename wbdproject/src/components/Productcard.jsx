@@ -34,7 +34,9 @@ function Productcard(props) {
         <h4 style={{ fontSize: "20px", fontFamily: "500" }}>
           Gender: {category}
         </h4>
+        <div className={styles.imagediv}>
         <img className={styles.imgtag} src={image} alt="imagephoto" />
+        </div>
         <h3>{title}</h3>
         <h4>Cost: {price}</h4>
 

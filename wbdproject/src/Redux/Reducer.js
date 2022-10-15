@@ -4,7 +4,7 @@ const initalstates = {
   Productsdata: [],
   isLoading: false,
   isError: false,
-  cartdatacount : JSON.parse(localStorage.getItem("cart_data")).length || 0
+  cartdatacount : JSON.parse(localStorage.getItem("cart_data")) || 0
 };
 
 export const Reducer = (state = initalstates, { type, payload }) => {

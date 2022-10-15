@@ -21,7 +21,7 @@ function Navbar() {
         }}
         to="/Cart"
       >
-        cart_{cartdatacount}
+        cart {cartdatacount}
       </Link>
     </div>
   );
