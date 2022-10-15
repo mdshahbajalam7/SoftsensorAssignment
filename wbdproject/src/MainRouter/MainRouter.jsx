@@ -10,7 +10,7 @@ function MainRouter() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Product />} />
-        <Route path="/cart/:id" element={<Cartpage />} />
+        <Route path="/Cart" element={<Cartpage />} />
       </Routes>
     </>
   );

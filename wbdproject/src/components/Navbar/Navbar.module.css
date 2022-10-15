@@ -1,19 +1,18 @@
 .navbar {
-  margin-top: 10px;
-  border-radius: 10px;
   width: 100%;
   margin: auto;
-  border: 1px solid;
-  background-color: gray;
+  background-color: goldenrod;
   display: flex;
   justify-content: space-around;
   overflow: hidden;
   top: 0;
   position: fixed;
+  z-index: 20;
 }
 .navbar h3{
   margin-top:10px;
   color: white;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 30px;
+  cursor: pointer;
 }

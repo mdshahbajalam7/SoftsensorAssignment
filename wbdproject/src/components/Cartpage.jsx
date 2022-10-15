@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styles from "../components/Product.module.css";
 import { CART_DATA_COUNT } from "../Redux/actiontype";
@@ -12,21 +12,22 @@ import "react-toastify/dist/ReactToastify.css";
 function Cartpage() {
   // call/ the data for localstorage here
   const dispatch = useDispatch();
+
+
+  const {cartdatacount} = useSelector(state=>state)
   
   const [cartData, setCartData] = useState([]);
-  console.log(cartData);
 
   useEffect(() => {
     setCartData(JSON.parse(localStorage.getItem("cart_data")));
   }, []);
 
   const Remove = (index) => {
-    const getdata = JSON.parse(localStorage.getItem("cart_data"));
     toast.error("Item Remove in cart !", {
       position: toast.POSITION.TOP_CENTER,
     });
+    const getdata = JSON.parse(localStorage.getItem("cart_data"));
     getdata.splice(index, 1);
-    console.log(getdata);
     localStorage.setItem("cart_data", JSON.stringify(getdata));
     setCartData(getdata);
     dispatch({
@@ -39,22 +40,24 @@ function Cartpage() {
 
   return (
     <>
+     <ToastContainer />
       {/* Button for go back to product page */}
 
       <div className={styles.flexdiv}>
+        
         <Button
           style={{ marginLeft: "30px"}}
           variant="contained"
           onClick={() => navigate("/")}
         >
-          Back
+          Back To Home
         </Button>
       </div>
 
       {/* localstorage data maping here */}
 
       <div className={styles.card_products}>
-        {cartData.map((elem, index) => (
+        {cartdatacount==0  ? <h1>No Item in Cart..</h1> : cartData.map((elem, index) => (
           <div key={elem.id}>
             <div className={styles.map}>
               <h4 style={{ fontSize: "20px", fontFamily: "500" }}>
@@ -73,7 +76,6 @@ function Cartpage() {
               >
                 Remove
               </Button>
-              <ToastContainer />
             </div>
           </div>
         ))}
